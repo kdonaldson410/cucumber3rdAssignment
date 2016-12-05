@@ -1,32 +1,6 @@
 Feature: Checkout
 
 Scenario Outline: Total
-Given I have <count> banana(s) that cost <cost> per banana
-When scan <count> banana(s) at checkout
-Then total at checkout is <total>
-
-Examples:
-| count | cost | total |
-| 1 | .40 | count * cost |
-| 2 | .40 | count * cost |
-| 3 | .40 | count * cost |
-
-Or would the scenario need to be:
-
-Scenario Outline: Total
-Given bananas cost <cost> per banana
-When scan <count> banana(s) at checkout
-Then total at checkout is <total>
-
-Examples:
-| cost | count | total |
-| .40 | 1 | count * cost |
-| .40 | 2 | count * cost |
-| .40 | 3 | count * cost |
-
-Or would the scenario need to be:
-
-Scenario Outline: Total
 Given bananas cost <cost> per banana
 When scan <count> banana(s) at checkout
 Then total at checkout is <total>
